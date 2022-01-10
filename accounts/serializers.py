@@ -15,7 +15,7 @@ Owner._meta.get_field('email')._unique = True
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = Owner
-        fields = ('id', 'email')
+        fields = ('id', 'email', 'account_type', 'first_name')
 
 # Register Serializer
 class RegisterSerializer(serializers.ModelSerializer):
