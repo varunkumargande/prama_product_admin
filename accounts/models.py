@@ -58,3 +58,9 @@ class Owner(AbstractUser):
     REQUIRED_FIELDS = ['account_type']
 
     objects = CustomUserManager()
+
+    def save(self, *args, **kwargs):
+        # assigning user to group
+        if self._state.adding:
+            pass
+        super(Owner, self).save(*args, **kwargs)
