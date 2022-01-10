@@ -137,10 +137,7 @@ REST_FRAMEWORK = {
 
 # These are the default values if none are set
 REST_KNOX = {
-  'TOKEN_TTL': timedelta(minutes=1),
   'TOKEN_LIMIT_PER_USER': 2,
-  'AUTO_REFRESH': True,
-  'MIN_REFRESH_INTERVAL': 10,
 }
 
 
