@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # 3rd Party Apps
     'rest_framework',
     'knox',
+    'corsheaders',
     # Custom Apps
     'accounts',
     'products',
@@ -59,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'prama_product_admin.urls'
@@ -154,6 +156,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+CORS_ORIGIN_ALLOW_ALL=True
 
 
 # Static files (CSS, JavaScript, Images)
